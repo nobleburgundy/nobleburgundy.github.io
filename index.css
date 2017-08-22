@@ -7,6 +7,7 @@ body {
     background-size: cover;
 }
 .section {
+    padding-top: 20px;
     height: 100vh;
 }
 .container {
@@ -20,9 +21,7 @@ body {
 }
 .hero {
     width: auto;
-    height: auto;
-    position: absolute;
-    top: 30vh;
+    height: 400px;
 
     margin: auto;
 }
@@ -30,9 +29,13 @@ body {
     font-size: 4rem;
     text-align: left;
 }
+.showsPanel {
+    text-align: center;
+}
 .showsList {
     margin-left: 5%;
     font-family: "Courier New", monospace;
+    font-size: 1rem;
 }
 .showsList, li {
     padding-bottom: 5px;

@@ -3,13 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JAMES CHARLES</title>
+    <title>NOBLE BURGUNDY</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
     <link rel="stylesheet" href="index.css"/>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/af.js"></script>
+    <script src="shows.js"></script>
 </head>
-<body>
+<body onload="parseShows()">
 <section class="section">
     <nav class="navbar ">
         <div class="navbar-brand">
@@ -28,19 +30,7 @@
         <h1 class="header">
             Shows
         </h1>
-        <ul class="showsList">
-            <li>
-                10.28.2017 Turf Club (w/The Federales)
-            </li>
-            <li>
-                11.18.2017 Aster Cafe (solo show)
-            </li>
-            <li>
-                11.20.2017 Turf Club (solo show)
-            </li>
-            <li>
-                11.21.2017 7th Street Entry (w/The Federales)
-            </li>
+        <ul class="showsList" id="showsList">
         </ul>
     </div>
 </section>
