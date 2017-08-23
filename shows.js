@@ -33,7 +33,7 @@ function parseShows() {
     var city = showData[i].venue.city + " ";
     var state = showData[i].venue.region + " ";
     var date = showData[i].datetime;
-    var dateFormat = date.substr(0, date.indexOf('T')) + " ";
+    var dateFormat = date.substr(0, date.indexOf('T') + 1) + " ";
     dateFormat = new Date(dateFormat);
     dateFormat = dateFormat.getMonth() + "." + dateFormat.getDay() + "." + dateFormat.getFullYear() + " ";
     var artist = "(w/ " + showData[i].lineup[0] + ") ";
