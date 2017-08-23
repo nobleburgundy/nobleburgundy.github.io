@@ -34,8 +34,11 @@ function parseShows() {
     var state = showData[i].venue.region + " ";
     var date = showData[i].datetime;
     var dateFormat = date.substr(0, date.indexOf('T')) + " ";
+    dateFormat = new Date(dateFormat);
+    dateFormat = dateFormat.getMonth() + "." + dateFormat.getDay() + "." + dateFormat.getFullYear() + " ";
     var artist = "(w/ " + showData[i].lineup[0] + ") ";
-    returnString += '<li>' + dateFormat + venue + artist + '</li>'
+    var url = showData[i].url
+    returnString += "<li><a target='_blank' href=" + url + ">" + dateFormat + venue + artist + '</a></li>'
   }
   document.getElementById('showsList').innerHTML = returnString;
 }
