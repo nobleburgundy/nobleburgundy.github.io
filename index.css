@@ -13,16 +13,10 @@ body {
 .container {
 
 }
-.title {
-    font-family: 'Bungee Shade', 'Courier New', monospace;
-    text-align: center;
-    /*vertical-align: middle;*/
-    font-size: 8rem;
-}
 .hero {
     width: auto;
-    height: 400px;
-
+    height: auto;
+    padding: 5%;
     margin: auto;
 }
 .header {
@@ -47,3 +41,21 @@ a {
     color: black;
 }
 
+.title {
+    font-family: 'Bungee Shade', 'Courier New', monospace;
+    text-align: center;
+    /*vertical-align: middle;*/
+    font-size: 2rem;
+}
+
+@media (min-width: 400px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 850px) {
+    .title {
+        font-size: 8rem;
+    }
+}
