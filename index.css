@@ -3,7 +3,6 @@ body {
     /*background-image: url("https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/294600_517101510309_7143579_n.jpg?oh=1585a1b244ae141ffbe698bf23fa7bf9&oe=5A177501");*/
     /*background-image: url("https://scontent-ort2-2.xx.fbcdn.net/v/t31.0-8/339016_469424666412824_42981027_o.jpg?oh=dac87e1914790bb9a2a536fdb8d0e437&oe=5A1BD7CA");*/
     /*background-image: url("https://scontent-ort2-2.xx.fbcdn.net/v/t31.0-8/741185_511379778883979_756516617_o.jpg?oh=adbb931b74eaa066c15c7a19d3147bbb&oe=5A1A5178");*/
-    /*background-image: url("https://scontent-ort2-2.xx.fbcdn.net/v/t31.0-8/741185_511379778883979_756516617_o.jpg?oh=adbb931b74eaa066c15c7a19d3147bbb&oe=5A1A5178");*/
     background-size: cover;
 }
 .section {
@@ -11,7 +10,7 @@ body {
     height: 100vh;
 }
 .container {
-
+    margin-left: 2%;
 }
 .hero {
     width: auto;
@@ -20,19 +19,26 @@ body {
     margin: auto;
 }
 .header {
+    font-family: "Courier New", monospace;
+
     font-size: 4rem;
     text-align: left;
 }
 .showsPanel {
-    text-align: center;
+    text-align: left;
+
+
 }
 .showsList {
-    margin-left: 5%;
+    /*margin-left: 5%;*/
     font-family: "Courier New", monospace;
     font-size: 1rem;
+
 }
 .showsList, li {
     padding-bottom: 5px;
+    padding-left: auto;
+    padding-right: auto;
 }
 .bookingContact {
     width: 500px;
@@ -46,6 +52,9 @@ a {
     text-align: center;
     /*vertical-align: middle;*/
     font-size: 2rem;
+}
+.navbar-item {
+    display: inline-block;
 }
 
 @media (min-width: 400px) {

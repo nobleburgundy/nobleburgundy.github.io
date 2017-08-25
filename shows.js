@@ -1,6 +1,6 @@
 var data = null;
 
-var xhr = new XMLHttpRequest();
+var xhr             = new XMLHttpRequest();
 xhr.withCredentials = true;
 
 xhr.addEventListener("readystatechange", function () {
@@ -18,28 +18,48 @@ xhr.send(data);
 
 function httpGet() {
   var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open( "GET", "https://rest.bandsintown.com/artists/The%20Federales/events?app_id=jamesG", false ); // false for synchronous request
-  xmlHttp.send( null );
+  xmlHttp.open("GET", "https://rest.bandsintown.com/artists/The%20Federales/events?app_id=jamesG", false); // false for synchronous request
+  xmlHttp.send(null);
   var response = xmlHttp.responseText;
   return response;
 }
 
 function parseShows() {
-  var showData = JSON.parse(httpGet());
+  var showData     = JSON.parse(httpGet());
   var returnString = '';
   console.info(showData);
   for (var i = 0; i < showData.length; i++) {
-    var venue = showData[i].venue.name + " ";
-    var city = showData[i].venue.city + " ";
-    var state = showData[i].venue.region + " ";
-    var date = showData[i].datetime;
+    var venue      = showData[i].venue.name + " ";
+    var city       = showData[i].venue.city + " ";
+    var state      = showData[i].venue.region + " ";
+    var date       = showData[i].datetime;
     var dateFormat = new Date(date);
-    dateFormat = dateFormat.getMonth() + "." + dateFormat.getDay() + "." + dateFormat.getFullYear() + " ";
-    var artist = "(w/ " + showData[i].lineup[0] + ") ";
-    var url = showData[i].url
+    dateFormat     = dateFormat.getMonth() + "." + dateFormat.getDay() + "." + dateFormat.getFullYear() + " ";
+    var artist     = "(w/ " + showData[i].lineup[0] + ") ";
+    var url        = showData[i].url
     returnString += "<li><a target='_blank' href=" + url + ">" + dateFormat + venue + artist + '</a></li>'
   }
-  document.getElementById('showsList').innerHTML = returnString;
+
+  return returnString;
+}
+
+function navBarRender() {
+  return "<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\"><p>Home</p></a><a class=\"navbar-item\" href=\"shows.html\"> <p>Shows</p></a><a class=\"navbar-item\" href=\"press.html\"> <p>Press Kit</p></a></nav>";
+}
+
+function render() {
+  var renderArray = [
+    document.getElementById('nav').innerHTML = navBarRender(),
+    document.getElementById('showsList').innerHTML = parseShows()
+  ];
+
+  for (var i = 0; i < renderArray.length; i++) {
+    try {
+      renderArray[i];
+    } catch (err) {
+      console.log(err);
+    }
+  }
 }
 
 

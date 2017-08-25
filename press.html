@@ -3,71 +3,61 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Noble Burgundy</title>
+    <title>Charlie James Music - Press</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
     <link rel="stylesheet" href="index.css"/>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <link rel="icon"
+          type="image/png"
+          href="https://rvamag.com/wp-content/themes/genesis-bfg/build/images/favicons/favicon.ico?v=1.1">
+    <script src="shows.js"></script>
 </head>
-<body>
+<body onload="render()">
+<div id="nav"></div>
 <section class="section">
-    <nav class="navbar ">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
-                <p>Home</p>
-            </a>
-        </div>
-        <a class="navbar-item" href="shows.html">
-            <p>Shows</p>
-        </a>
-        <a class="navbar-item" href="press.html">
-            <p>Press Kit</p>
-        </a>
-    </nav>
+    <h1 class="header">Press Kit</h1>
     <div class="container">
         <div class="bookingContact">
-        <h1 class="header">
-            Press Kit
-        </h1>
-        <h2>Contact Form</h2>
-        <small>For booking etc...</small>
-        <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Text input">
+            <h2>Contact Form</h2>
+            <small>For booking etc...</small>
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
             </div>
-        </div>
 
-        <div class="field">
-            <label class="label">Email</label>
-            <div class="control has-icons-left has-icons-right">
-                <input class="input" type="text" placeholder="Email input" value="hello@">
-                <span class="icon is-small is-left">
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" placeholder="Email input" value="hello@">
+                    <span class="icon is-small is-left">
                   <i class="fa fa-envelope"></i>
                 </span>
-                <!--<span class="icon is-small is-right">-->
-                  <!--<i class="fa fa-warning"></i>-->
-                <!--</span>-->
+                    <!--<span class="icon is-small is-right">-->
+                    <!--<i class="fa fa-warning"></i>-->
+                    <!--</span>-->
+                </div>
+                <!--<p class="help is-danger">This email is invalid</p>-->
             </div>
-            <!--<p class="help is-danger">This email is invalid</p>-->
-        </div>
 
-        <div class="field">
-            <label class="label">Message</label>
-            <div class="control">
-                <textarea class="textarea" placeholder="Textarea"></textarea>
+            <div class="field">
+                <label class="label">Message</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Textarea"></textarea>
+                </div>
             </div>
-        </div>
 
-        <div class="field is-grouped">
-            <div class="control">
-                <button class="button is-primary">Submit</button>
-            </div>
-            <div class="control">
-                <button class="button is-link">Cancel</button>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-primary">Submit</button>
+                </div>
+                <div class="control">
+                    <button class="button is-link">Cancel</button>
+                </div>
             </div>
         </div>
-    </div>
 </section>
 </body>
 </html>
