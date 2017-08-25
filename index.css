@@ -13,32 +13,30 @@ body {
     margin-left: 2%;
 }
 .hero {
-    width: auto;
+    width: 100%;
     height: auto;
-    padding: 5%;
-    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: 0;
 }
 .header {
     font-family: "Courier New", monospace;
-
     font-size: 4rem;
     text-align: left;
 }
-.showsPanel {
+.showsPanel, ul {
     text-align: left;
-
-
+    width: 85%;
+    margin: auto;
 }
 .showsList {
     /*margin-left: 5%;*/
     font-family: "Courier New", monospace;
-    font-size: 1rem;
 
 }
 .showsList, li {
     padding-bottom: 5px;
-    padding-left: auto;
-    padding-right: auto;
+    font-size: x-small;
 }
 .bookingContact {
     width: 500px;
@@ -50,6 +48,7 @@ a {
 .title {
     font-family: 'Bungee Shade', 'Courier New', monospace;
     text-align: center;
+    margin: 0;
     /*vertical-align: middle;*/
     font-size: 2rem;
 }
@@ -57,14 +56,29 @@ a {
     display: inline-block;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 550px) {
     .title {
         font-size: 3rem;
     }
+    .showsList, li {
+        font-size: small;
+    }
 }
 
-@media (min-width: 850px) {
+@media (min-width: 872px) {
     .title {
-        font-size: 8rem;
+        font-size: 5rem;
+    }
+    .showsList, li {
+        font-size: large;
+    }
+}
+
+@media (max-width: 390px) {
+    .title {
+        font-size: 1rem;
+    }
+    .showsList, li {
+        font-size: x-small;
     }
 }
