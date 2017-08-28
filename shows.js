@@ -34,7 +34,8 @@ function parseShows() {
     var state      = showData[i].venue.region + " ";
     var date       = showData[i].datetime;
     var dateFormat = new Date(date);
-    dateFormat     = dateFormat.getMonth() + "." + dateFormat.getDay() + "." + dateFormat.getFullYear() + " ";
+    // remember getMonth() is zero indexed - others are not
+    dateFormat     = (dateFormat.getMonth() + 1) + "." + dateFormat.getDate() + "." + dateFormat.getFullYear() + " ";
     var artist     = "(w/ " + showData[i].lineup[0] + ") ";
     var url        = showData[i].url
     returnString += "<li><a target='_blank' href=" + url + ">" + dateFormat + venue + artist + '</a></li>'
@@ -44,7 +45,7 @@ function parseShows() {
 }
 
 function navBarRender() {
-  return "<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\"><p>Home</p></a><a class=\"navbar-item\" href=\"shows.html\"> <p>Shows</p></a><a class=\"navbar-item\" href=\"press.html\"> <p>Press Kit</p></a></nav>";
+  return ("<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\"><p>Home</p></a><a class=\"navbar-item\" href=\"shows.html\"><p>Shows</p></a><a class=\"navbar-item\" href=\"press.html\"><p>Press Kit</p></a></nav>");
 }
 
 function render() {
