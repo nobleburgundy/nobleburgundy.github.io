@@ -63,4 +63,12 @@ function render() {
   }
 }
 
+function checkURLForEmailSuccess(){
+  var notification = '<div class="notification is-success"><button class="delete"></button>Thank you!</div>';
+  var url = window.location.href();
+  if (url.indexOf('thank') > -1) {
+    document.getElementById('contactForm').appendChild(notification);
+  }
+}
+
 
