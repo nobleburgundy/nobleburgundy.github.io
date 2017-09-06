@@ -62,7 +62,7 @@ function render() {
     }
   }
   
-  checkURLForEmailSuccess()
+  checkURLForEmailSuccess();
 }
 
 function checkURLForEmailSuccess(){
