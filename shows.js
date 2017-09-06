@@ -61,6 +61,8 @@ function render() {
       console.log(err);
     }
   }
+  
+  checkURLForEmailSuccess()
 }
 
 function checkURLForEmailSuccess(){
