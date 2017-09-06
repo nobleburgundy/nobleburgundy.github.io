@@ -68,7 +68,9 @@ function render() {
 function checkURLForEmailSuccess(){
   var notification = '<div class="notification is-success"><button class="delete"></button>Thank you!</div>';
   var url = window.location.href();
+  console.log('checkURLForEmailSuccess() called');
   if (url.indexOf('thank') > -1) {
+    console.log('thank you found in url');
     document.getElementById('contactForm').appendChild(notification);
   }
 }
