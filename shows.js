@@ -50,8 +50,9 @@ function navBarRender() {
 
 function render() {
   var renderArray = [
+    checkURLForEmailSuccess(),
     document.getElementById('nav').innerHTML = navBarRender(),
-    document.getElementById('showsList').innerHTML = parseShows()
+    document.getElementById('showsList').innerHTML = parseShows(),
   ];
 
   for (var i = 0; i < renderArray.length; i++) {
@@ -61,18 +62,14 @@ function render() {
       console.log(err);
     }
   }
-  
-  checkURLForEmailSuccess();
 }
 
 function checkURLForEmailSuccess(){
-  var notification = '<div class="notification is-success"><button class="delete"></button>Thank you!</div>';
-  var url = window.location.href();
+  var notification = '<div class="notification is-primary">Thank you!</div>';
+  var url = window.location.href;
   console.log('checkURLForEmailSuccess() called');
   if (url.indexOf('thank') > -1) {
     console.log('thank you found in url');
-    document.getElementById('contactForm').appendChild(notification);
+    document.getElementById('contactForm').innerHTML = document.getElementById('contactForm').innerHTML + notification;
   }
 }
-
-
