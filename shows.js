@@ -1,19 +1,19 @@
-var data = null;
-
-var xhr             = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === 4) {
-    console.log(this.responseText);
-  }
-});
-
-xhr.open("GET", "https://rest.bandsintown.com/artists/The%20Federales/events?app_id=jamesG");
-xhr.setRequestHeader("cache-control", "no-cache");
-xhr.setRequestHeader("postman-token", "ce499da0-7072-ee93-4f8f-f2d447cd7dc7");
-
-xhr.send(data);
+// var data = null;
+//
+// var xhr             = new XMLHttpRequest();
+// xhr.withCredentials = true;
+//
+// xhr.addEventListener("readystatechange", function () {
+//   if (this.readyState === 4) {
+//     console.log(this.responseText);
+//   }
+// });
+//
+// xhr.open("GET", "https://rest.bandsintown.com/artists/The%20Federales/events?app_id=jamesG");
+// xhr.setRequestHeader("cache-control", "no-cache");
+// xhr.setRequestHeader("postman-token", "ce499da0-7072-ee93-4f8f-f2d447cd7dc7");
+//
+// xhr.send(data);
 
 
 function httpGet() {
@@ -50,9 +50,8 @@ function navBarRender() {
 
 function render() {
   var renderArray = [
-    checkURLForEmailSuccess(),
     document.getElementById('nav').innerHTML = navBarRender(),
-    document.getElementById('showsList').innerHTML = parseShows(),
+    // document.getElementById('showsList').innerHTML = parseShows(),
   ];
 
   for (var i = 0; i < renderArray.length; i++) {
@@ -64,12 +63,12 @@ function render() {
   }
 }
 
-function checkURLForEmailSuccess(){
-  var notification = '<div class="notification is-primary">Thank you!</div>';
-  var url = window.location.href;
-  console.log('checkURLForEmailSuccess() called');
-  if (url.indexOf('thank') > -1) {
-    console.log('thank you found in url');
-    document.getElementById('contactForm').innerHTML = document.getElementById('contactForm').innerHTML + notification;
+function renderEmailThankYouModal() {
+  console.log('renderEmailThankYouModal() called');
+  var element = document.getElementById('emailModal');
+  if (element.className.indexOf('is-active') > -1) {
+    element.classList.remove('is-active');
+  } else {
+    element.classList.add('is-active')
   }
 }
