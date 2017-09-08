@@ -20,8 +20,8 @@ body {
 }
 .header {
     font-family: "Courier New", monospace;
-    font-size: 4rem;
     text-align: left;
+    font-size: 2em;
 }
 .showsPanel, ul {
     text-align: left;
@@ -65,6 +65,13 @@ a {
     .showsPanel, ul {
         width: 85%;
     }
+    #contactForm {
+        width: 100vw;
+        padding-right: 3%;
+    }
+    .bookingContact {
+        width: 100vw;
+    }
 }
 
 @media (min-width: 872px) {
@@ -77,6 +84,13 @@ a {
     .showsPanel, ul {
         width: 85%;
     }
+    #contactForm {
+        width: 100vw;
+        padding: 1%;
+    }
+    .bookingContact {
+        width: 100vw;
+    }
 }
 
 @media (max-width: 400px) {
@@ -88,5 +102,12 @@ a {
     }
     .showsPanel, ul {
         width: 90%;
+    }
+    #contactForm {
+        width: 100vw;
+        padding: 1%;
+    }
+    .bookingContact {
+        width: 100vw;
     }
 }
