@@ -78,8 +78,8 @@
                         <button class="button is-link">Cancel</button>
                     </div>
                 </div>
-                <!--<input type="hidden" name="*redirect" value="index.html"/>-->
-                <!--<input type="hidden" name="*honeypot" />-->
+                <input type="hidden" name="*redirect" value="https://nobleburgundy.github.io/"/>
+                <input type="hidden" name="*honeypot" />
             </form>
             <div class="modal" id="emailModal" onclick="renderEmailThankYouModal()">
                 <div class="modal-background"></div>
@@ -116,6 +116,12 @@
         },
         error: function () {
           console.log("Failure. Try again.");
+          var element = document.getElementById('emailModal');
+          if (element.className.indexOf('is-active') > -1) {
+            element.classList.remove('is-active');
+          } else {
+            element.classList.add('is-active');
+          }
         }
       });
     });
