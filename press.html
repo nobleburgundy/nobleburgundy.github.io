@@ -110,6 +110,7 @@
               var element = document.getElementById('emailModal');
               if (element.className.indexOf('is-active') > -1) {
                 element.classList.remove('is-active');
+                window.location.reload();
               } else {
                 element.classList.add('is-active');
               }

@@ -51,7 +51,7 @@ function navBarRender() {
 function render() {
   var renderArray = [
     document.getElementById('nav').innerHTML = navBarRender(),
-    // document.getElementById('showsList').innerHTML = parseShows(),
+    document.getElementById('showsList').innerHTML = parseShows(),
   ];
 
   for (var i = 0; i < renderArray.length; i++) {
@@ -68,6 +68,7 @@ function renderEmailThankYouModal() {
   var element = document.getElementById('emailModal');
   if (element.className.indexOf('is-active') > -1) {
     element.classList.remove('is-active');
+    document.getElementById('contactForm').reset();
   } else {
     element.classList.add('is-active')
   }
