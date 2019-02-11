@@ -18,16 +18,21 @@
 
 function httpGet() {
   var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", "https://rest.bandsintown.com/artists/The%20Federales/events?app_id=jamesG", false); // false for synchronous request
+  xmlHttp.open("GET", "https://rest.bandsintown.com/artists/MR%20500/events?app_id=jamesG", false); // false for synchronous request
   xmlHttp.send(null);
   var response = xmlHttp.responseText;
   return response;
 }
 
 function parseShows() {
-  var showData     = JSON.parse(httpGet());
+  var showData = null;
+  try {
+    showData     = JSON.parse(httpGet());
+  } catch (error) {
+    return "<p><i>No shows scheduled at this time</i></p>";
+  }
   var returnString = '';
-  console.info(showData);
+  console.info(showData.length);
   for (var i = 0; i < showData.length; i++) {
     var venue      = showData[i].venue.name + " ";
     var city       = showData[i].venue.city + " ";
@@ -45,7 +50,7 @@ function parseShows() {
 }
 
 function navBarRender() {
-  return ("<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\"><p>Home</p></a><a class=\"navbar-item\" href=\"shows.html\"><p>Shows</p></a><a class=\"navbar-item\" href=\"press.html\"><p>Press Kit</p></a></nav>");
+  return ("<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\"><p>Home</p></a><a class=\"navbar-item\" href=\"shows.html\"><p>Shows</p></a><a class=\"navbar-item\" href=\"press.html\"><p>Contact</p></a></nav>");
 }
 
 function render() {

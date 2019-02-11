@@ -1,20 +1,15 @@
 body {
-    /*background-image: url("https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/45681_1583464467189_7899072_n.jpg?oh=cceb25b55d1ee22fb2728baff0058c28&oe=5A15AD44");*/
-    /*background-image: url("https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/294600_517101510309_7143579_n.jpg?oh=1585a1b244ae141ffbe698bf23fa7bf9&oe=5A177501");*/
-    /*background-image: url("https://scontent-ort2-2.xx.fbcdn.net/v/t31.0-8/339016_469424666412824_42981027_o.jpg?oh=dac87e1914790bb9a2a536fdb8d0e437&oe=5A1BD7CA");*/
-    /*background-image: url("https://scontent-ort2-2.xx.fbcdn.net/v/t31.0-8/741185_511379778883979_756516617_o.jpg?oh=adbb931b74eaa066c15c7a19d3147bbb&oe=5A1A5178");*/
+    background-image: url("../img/bg_img.jpg");
     background-size: cover;
 }
 .section {
     padding-top: 20px;
     height: 100vh;
 }
-.container {
-}
 .hero {
     width: 100%;
     height: auto;
-    padding-top: 5%;
+    padding-top: 15%;
     padding-bottom: 5%;
     margin: 0;
 }
@@ -31,11 +26,12 @@ body {
 .showsList {
     /*margin-left: 5%;*/
     font-family: "Courier New", monospace;
+    font-size: medium;
 
 }
-.showsList, li {
+.showsList, a, p {
     padding-bottom: 5px;
-    font-size: x-small;
+    font-size: medium;
 }
 .bookingContact {
     width: 500px;
@@ -43,21 +39,31 @@ body {
 a {
     color: black;
 }
-
 .title {
     font-family: 'Bungee Shade', 'Courier New', monospace;
     text-align: center;
     margin: 0;
-    /*vertical-align: middle;*/
-    font-size: 1.5rem;
+    color: deepskyblue;
 }
 .navbar-item {
     display: inline-block;
+    margin: 0;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 5px;
+}
+#showsContainer {
+    margin: 10%;
 }
 
 @media (min-width: 550px) {
     .title {
-        font-size: 3rem;
+        font-size: 4rem;
+        text-shadow: 1px 1px gray;
     }
     .showsList, li {
         font-size: x-small;
@@ -76,7 +82,7 @@ a {
 
 @media (min-width: 872px) {
     .title {
-        font-size: 5rem;
+        font-size: 7rem;
     }
     .showsList, li {
         font-size: medium;
