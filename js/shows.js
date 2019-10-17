@@ -18,7 +18,7 @@
 
 function httpGet() {
   var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", "https://rest.bandsintown.com/artists/MR%20500/events?app_id=jamesG", false); // false for synchronous request
+  xmlHttp.open("GET", "https://rest.bandsintown.com/artists/The%20Federales/events?app_id=jamesG", false); // false for synchronous request
   xmlHttp.send(null);
   var response = xmlHttp.responseText;
   return response;
@@ -50,7 +50,7 @@ function parseShows() {
 }
 
 function navBarRender() {
-  return ("<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\"><p>Home</p></a><a class=\"navbar-item\" href=\"shows.html\"><p>Shows</p></a><a class=\"navbar-item\" href=\"press.html\"><p>Contact</p></a></nav>");
+  return ("<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\"><p>Home</p></a><a class=\"navbar-item\" href=\"shows.html\"><p>Shows</p></a><a class=\"navbar-item\" href=\"contact.html\"><p>Contact</p></a></nav>");
 }
 
 function render() {

@@ -27,6 +27,7 @@ body {
     /*margin-left: 5%;*/
     font-family: "Courier New", monospace;
     font-size: medium;
+    text-align: center;
 
 }
 .showsList, a, p {
@@ -52,9 +53,9 @@ a {
 .navbar {
     position: fixed;
     top: 0;
-    margin: 5px;
-    padding: 1%;
-    border-radius: 5px;
+    margin: 2px;
+    /* padding: 1%; */
+    /* border-radius: 5px; */
 }
 #showsContainer {
     margin: 10%;
