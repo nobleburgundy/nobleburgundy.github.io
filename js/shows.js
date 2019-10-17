@@ -50,7 +50,7 @@ function parseShows() {
 }
 
 function navBarRender() {
-  return ("<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\"><p>Home</p></a><a class=\"navbar-item\" href=\"shows.html\"><p>Shows</p></a><a class=\"navbar-item\" href=\"contact.html\"><p>Contact</p></a></nav>");
+  return ("<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\">Home</a><a class=\"navbar-item\" href=\"shows.html\">Shows</a><a class=\"navbar-item\" href=\"contact.html\">Contact</a></nav>");
 }
 
 function render() {

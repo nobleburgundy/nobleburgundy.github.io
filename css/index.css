@@ -7,11 +7,15 @@ body {
     height: 100vh;
 }
 .hero {
-    width: 100%;
+    width: auto;
     height: auto;
     padding-top: 15%;
     padding-bottom: 5%;
     margin: 0;
+}
+.showsPanel{
+    width: 70%;
+    margin: auto auto;
 }
 .header {
     font-family: "Courier New", monospace;
@@ -20,16 +24,17 @@ body {
 }
 .showsPanel, ul {
     text-align: left;
-    width: 95%;
-    margin: auto auto;
 }
 .showsList {
     font-family: "Courier New", monospace;
     font-size: medium;
 }
 .showsList, a, p {
-    padding-bottom: 5px;
+    padding: 5px;
     font-size: medium;
+}
+.showsList a:hover{
+    background-color: lightblue;
 }
 .bookingContact {
     width: 500px;
