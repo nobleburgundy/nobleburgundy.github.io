@@ -27,22 +27,22 @@ function httpGet() {
 function parseShows() {
   var showData = null;
   try {
-    showData     = JSON.parse(httpGet());
+    showData = JSON.parse(httpGet());
   } catch (error) {
     return "<p><i>No shows scheduled at this time</i></p>";
   }
   var returnString = '';
   console.info(showData.length);
   for (var i = 0; i < showData.length; i++) {
-    var venue      = showData[i].venue.name + " ";
-    var city       = showData[i].venue.city + " ";
-    var state      = showData[i].venue.region + " ";
-    var date       = showData[i].datetime;
+    var venue = showData[i].venue.name + " ";
+    var city = showData[i].venue.city + " ";
+    var state = showData[i].venue.region + " ";
+    var date = showData[i].datetime;
     var dateFormat = new Date(date);
     // remember getMonth() is zero indexed - others are not
-    dateFormat     = (dateFormat.getMonth() + 1) + "." + dateFormat.getDate() + "." + dateFormat.getFullYear() + " ";
-    var artist     = "(w/ " + showData[i].lineup[0] + ") ";
-    var url        = showData[i].url
+    dateFormat = (dateFormat.getMonth() + 1) + "." + dateFormat.getDate() + "." + dateFormat.getFullYear() + " ";
+    var artist = "(w/ " + showData[i].lineup[0] + ") ";
+    var url = showData[i].url
     returnString += "<li><a target='_blank' href=" + url + ">" + dateFormat + venue + artist + '</a></li>'
   }
 

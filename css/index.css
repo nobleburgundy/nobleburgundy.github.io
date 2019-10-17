@@ -21,7 +21,7 @@ body {
 .showsPanel, ul {
     text-align: left;
     width: 95%;
-    margin: auto;
+    margin: auto auto;
 }
 .showsList {
     font-family: "Courier New", monospace;
@@ -40,6 +40,8 @@ a {
 .title {
     font-family: 'Courier New', monospace;
     font-weight: 100;
+    font-size: 7rem;
+    text-shadow: 5px 5px #807676;
     text-align: center;
     margin: 0;
     color: deepskyblue;
@@ -56,61 +58,4 @@ a {
 }
 #showsPageContainer {
     margin-top: 15%;
-}
-@media (min-width: 550px) {
-    .title {
-        font-size: 4rem;
-        text-shadow: 1px 1px gray;
-    }
-    .showsList, li {
-        font-size: x-small;
-    }
-    .showsPanel, ul {
-        width: 85%;
-    }
-    #contactForm {
-        width: 100vw;
-        padding-right: 3%;
-    }
-    .bookingContact {
-        width: 100vw;
-    }
-}
-
-@media (min-width: 872px) {
-    .title {
-        font-size: 7rem;
-    }
-    .showsList, li {
-        font-size: medium;
-    }
-    .showsPanel, ul {
-        width: 85%;
-    }
-    #contactForm {
-        width: 100vw;
-        padding: 1%;
-    }
-    .bookingContact {
-        width: 100vw;
-    }
-}
-
-@media (max-width: 400px) {
-    .title {
-        font-size: 1.5rem;
-    }
-    .showsList, li {
-        font-size: 6px;
-    }
-    .showsPanel, ul {
-        width: 90%;
-    }
-    #contactForm {
-        width: 100vw;
-        padding: 1%;
-    }
-    .bookingContact {
-        width: 100vw;
-    }
 }
