@@ -24,11 +24,8 @@ body {
     margin: auto;
 }
 .showsList {
-    /*margin-left: 5%;*/
     font-family: "Courier New", monospace;
     font-size: medium;
-    text-align: center;
-
 }
 .showsList, a, p {
     padding-bottom: 5px;
@@ -41,7 +38,8 @@ a {
     color: black;
 }
 .title {
-    font-family: 'Bungee Shade', 'Courier New', monospace;
+    font-family: 'Courier New', monospace;
+    font-weight: 100;
     text-align: center;
     margin: 0;
     color: deepskyblue;
@@ -54,13 +52,11 @@ a {
     position: fixed;
     top: 0;
     margin: 2px;
-    /* padding: 1%; */
-    /* border-radius: 5px; */
+    background: transparent;
 }
-#showsContainer {
-    margin: 10%;
+#showsPageContainer {
+    margin-top: 15%;
 }
-
 @media (min-width: 550px) {
     .title {
         font-size: 4rem;
