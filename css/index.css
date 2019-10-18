@@ -9,7 +9,7 @@ body {
 .hero {
     width: auto;
     height: auto;
-    padding-top: 15%;
+    padding-top: 10%;
     padding-bottom: 5%;
     margin: 0;
 }
@@ -28,16 +28,16 @@ body {
 .showsList {
     font-family: "Courier New", monospace;
     font-size: medium;
-}
-.showsList, a, p {
     padding: 5px;
-    font-size: medium;
+    text-shadow: 3px 3px #e4cfcf;
 }
 .showsList a:hover{
     background-color: lightblue;
 }
 .bookingContact {
-    width: 500px;
+    width: 100%;
+    padding: 0 15%;
+    margin: auto auto;
 }
 a {
     color: black;
@@ -46,7 +46,7 @@ a {
     font-family: 'Courier New', monospace;
     font-weight: 100;
     font-size: 7rem;
-    text-shadow: 5px 5px #807676;
+    text-shadow: 7px 5px #807676;
     text-align: center;
     margin: 0;
     color: deepskyblue;
@@ -58,6 +58,22 @@ a {
 .navbar {
     background: transparent;
 }
-#showsPageContainer {
-    margin-top: 15%;
+@media only screen and (max-width: 768px) {
+    .title {
+        font-size: 4rem;
+        text-shadow: 2px 2px #807676;
+    }
+    .showsList {
+        font-size: xx-small;
+    }
+    .showsPanel {
+        margin: 0;
+        width: 100%;
+    }
+    .showsPanel, li {
+        padding-bottom: 2%;
+    }
+    .bookingContact {
+        padding: 0;
+    }
 }
