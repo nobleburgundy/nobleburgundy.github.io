@@ -56,9 +56,6 @@ a {
     margin: 0;
 }
 .navbar {
-    position: fixed;
-    top: 0;
-    margin: 2px;
     background: transparent;
 }
 #showsPageContainer {
