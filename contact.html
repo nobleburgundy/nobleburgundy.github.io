@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,122 +8,122 @@
     <meta name="referrer" content="origin">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
-    <link rel="stylesheet" href="css/index.css"/>
-    <link rel="icon"
-          type="image/png"
-          href="https://rvamag.com/wp-content/themes/genesis-bfg/build/images/favicons/favicon.ico?v=1.1">
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="icon" type="image/png"
+        href="https://rvamag.com/wp-content/themes/genesis-bfg/build/images/favicons/favicon.ico?v=1.1">
     <script src="js/shows.js"></script>
-    <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
 </head>
+
 <body onload="render()">
-<div id="nav"></div>
-<section class="section">
-    <h1 class="title">CONTACT</h1>
-    <div class="container">
-        <div class="bookingContact">
-            <form id="contactForm">
-                <div class="field">
-                    <label class="label">Name</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="What's your name?" name="name">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label class="label">Email</label>
-                    <div class="control has-icons-left has-icons-right">
-                        <input class="input" type="text" placeholder="What's your email?" name="email">
-                        <span class="icon is-small is-left">
-                            <i class="fa fa-envelope"></i>
-                        </span>
-                        <!--<span class="icon is-small is-right">-->
-                        <!--<i class="fa fa-warning"></i>-->
-                        <!--</span>-->
-                    </div>
-                    <!--<p class="help is-danger">This email is invalid</p>-->
-                </div>
-
-                <div class="field">
-                    <label class="label">Regarding?</label>
-                    <div class="control">
-                        <div class="select">
-                            <select name="regarding">
-                                <option value="Booking">Booking</option>
-                                <option value="Music Licensing">Music Licensing</option>
-                                <option value="General">Other</option>
-                            </select>
+    <div id="nav"></div>
+    <section class="section">
+        <h1 class="title">CONTACT</h1>
+        <div class="container">
+            <div class="bookingContact">
+                <form id="contactForm">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="What's your name?" name="name" required>
                         </div>
                     </div>
-                </div>
 
-                <div class="field">
-                    <label class="label">Message</label>
-                    <div class="control">
-                        <textarea class="textarea" placeholder="What do you want to say?" name="body"></textarea>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="What's your email?" name="email" required>
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            <!--<span class="icon is-small is-right">-->
+                            <!--<i class="fa fa-warning"></i>-->
+                            <!--</span>-->
+                        </div>
+                        <!--<p class="help is-danger">This email is invalid</p>-->
                     </div>
-                </div>
 
-                <div class="field is-grouped">
-                    <div class="control">
-                        <button class="button is-primary" type="submit">Submit</button>
+                    <div class="field">
+                        <label class="label">Regarding?</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="regarding">
+                                    <option value="Booking">Booking</option>
+                                    <option value="Music Licensing">Music Licensing</option>
+                                    <option value="General">Other</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="control">
-                        <button class="button is-link">Cancel</button>
+
+                    <div class="field">
+                        <label class="label">Message</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="What do you want to say?" name="body"></textarea>
+                        </div>
                     </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-primary" type="submit">Submit</button>
+                        </div>
+                        <div class="control">
+                            <button class="button is-link">Cancel</button>
+                        </div>
+                    </div>
+                    <input type="hidden" name="*redirect" value="https://nobleburgundy.github.io/" />
+                    <input type="hidden" name="*honeypot" />
+                </form>
+                <div class="modal" id="emailModal" onclick="renderEmailThankYouModal()">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <div class="box">
+                            Thank you! Your email has been sent and I'll get back to you ASAP. <strong>Party
+                                on</strong>.
+                        </div>
+                    </div>
+                    <button class="modal-close is-large" aria-label="close"></button>
                 </div>
-                <input type="hidden" name="*redirect" value="https://nobleburgundy.github.io/"/>
-                <input type="hidden" name="*honeypot" />
-            </form>
-            <div class="modal" id="emailModal" onclick="renderEmailThankYouModal()">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <div class="box">
-                        Thank you! Your email has been sent and I'll get back to you ASAP. <strong>Party on</strong>.
-                    </div>
-                </div>
-                <button class="modal-close is-large" aria-label="close"></button>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<script>
-  $(document).ready(function () {
-    $("#contactForm").submit(function (event) {
-      event.preventDefault();
-      $.ajax({
-        url: "https://www.enformed.io/ju26kmzp",
-        method: "post",
-        dataType: "json",
-        accepts: "application/json",
-        data: $("#contactForm").serialize(),
-        success: function () {
-          console.log("Your form was successfully received!");
-              var element = document.getElementById('emailModal');
-              if (element.className.indexOf('is-active') > -1) {
-                element.classList.remove('is-active');
-                window.location.reload();
-              } else {
-                element.classList.add('is-active');
-              }
-        },
-        error: function () {
-          console.log("Failure. Try again.");
-          var element = document.getElementById('emailModal');
-          if (element.className.indexOf('is-active') > -1) {
-            element.classList.remove('is-active');
-          } else {
-            element.classList.add('is-active');
-          }
-        }
-      });
-    });
-  });
-</script>
+    <script>
+        $(document).ready(function () {
+            $("#contactForm").submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    url: "https://www.enformed.io/ju26kmzp",
+                    method: "post",
+                    dataType: "json",
+                    accepts: "application/json",
+                    data: $("#contactForm").serialize(),
+                    success: function () {
+                        console.log("Your form was successfully received!");
+                        var element = document.getElementById('emailModal');
+                        if (element.className.indexOf('is-active') > -1) {
+                            element.classList.remove('is-active');
+                            window.location.reload();
+                        } else {
+                            element.classList.add('is-active');
+                        }
+                    },
+                    error: function () {
+                        console.log("Failure. Try again.");
+                        var element = document.getElementById('emailModal');
+                        if (element.className.indexOf('is-active') > -1) {
+                            element.classList.remove('is-active');
+                        } else {
+                            element.classList.add('is-active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
