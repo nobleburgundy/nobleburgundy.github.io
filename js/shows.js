@@ -14,14 +14,30 @@
 // xhr.setRequestHeader("postman-token", "ce499da0-7072-ee93-4f8f-f2d447cd7dc7");
 //
 // xhr.send(data);
-
+//rest.bandsintown.com/artists/ 
 
 function httpGet() {
   var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", "https://rest.bandsintown.com/artists/The%20Federales/events?app_id=jamesG", false); // false for synchronous request
-  xmlHttp.send(null);
-  var response = xmlHttp.responseText;
-  return response;
+  /*   let artist1 = "The%20Federales";
+    let artist2 = "Mr%20500";
+    xmlHttp.open("GET", `https://rest.bandsintown.com/artists/${artist1}/events?app_id=jamesG`, false); // false for synchronous request
+    xmlHttp.send(null);
+    var response = xmlHttp.responseText;
+    xmlHttp.open("GET", `https://rest.bandsintown.com/artists/${artist2}/events?app_id=jamesG`, false);
+    xmlHttp.send(null);
+    reponse +=  xmlHttp.responseText; */
+
+
+  // var artists = ['The%20Federales', '101759042'];
+  // var response2;
+  // artists.forEach(element => {
+  //   let artistElement = element;
+  //   xmlHttp.open("GET", `https://rest.bandsintown.com/artists/${element}/events?app_id=jamesG`, false); // false for synchronous request
+  //   xmlHttp.send(null);
+  //   response2 += xmlHttp.responseText;
+  // });
+  response2 = "{'text': 'No shows at this time'}";
+  return response2;
 }
 
 function parseShows() {
@@ -50,7 +66,7 @@ function parseShows() {
 }
 
 function navBarRender() {
-  return ("<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\">Home</a><a class=\"navbar-item\" href=\"shows.html\">Shows</a><a class=\"navbar-item\" href=\"contact.html\">Contact</a></nav>");
+  return ("<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\">Home</a><a class=\"navbar-item\" href=\"dev.html\">Dev Projects</a><a class=\"navbar-item\" href=\"shows.html\">Music</a><a class=\"navbar-item\" href=\"contact.html\">Contact</a></nav>");
 }
 
 function render() {
@@ -78,3 +94,12 @@ function renderEmailThankYouModal() {
     element.classList.add('is-active')
   }
 }
+
+
+window.addEventListener('mousemove', e => {
+  const titleBar = document.getElementsByClassName('title')[0];
+  let x = e.x / 50;
+  let y = e.y / 50;
+  let shadow = x + "px " + y + "px #807676"
+  titleBar.style.textShadow = shadow
+})
