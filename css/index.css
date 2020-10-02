@@ -1,79 +1,108 @@
 body {
-    background-image: url("../img/bg_img.jpg");
-    background-size: cover;
+  background-image: url("../img/bg_img.jpg");
+  background-size: cover;
 }
+
 .section {
-    padding-top: 20px;
-    height: 100vh;
+  padding-top: 20px;
+  height: 100vh;
 }
+
 .hero {
-    width: auto;
-    height: auto;
-    padding-top: 10%;
-    padding-bottom: 5%;
-    margin: 0;
+  width: auto;
+  height: auto;
+  padding-top: 10%;
+  padding-bottom: 5%;
+  margin: 0;
 }
-.showsPanel{
-    width: 70%;
-    margin: auto auto;
+
+.showsPanel {
+  width: 70%;
+  margin: auto auto;
 }
+
 .header {
-    font-family: "Courier New", monospace;
-    text-align: left;
-    font-size: 2em;
+  font-family: "Courier New", monospace;
+  text-align: left;
+  font-size: 2em;
 }
-.showsPanel, ul {
-    text-align: left;
+
+.showsPanel,
+ul {
+  text-align: left;
 }
+
 .showsList {
-    font-family: "Courier New", monospace;
-    font-size: medium;
-    padding: 5px;
-    text-shadow: 3px 3px #e4cfcf;
+  font-family: "Courier New", monospace;
+  font-size: medium;
+  padding: 5px;
+  text-shadow: 3px 3px #e4cfcf;
 }
-.showsList a:hover{
-    background-color: lightblue;
+
+.showsList a:hover {
+  background-color: lightblue;
 }
+
 .bookingContact {
-    width: 100%;
-    padding: 0 15%;
-    margin: auto auto;
+  width: 100%;
+  padding: 0 15%;
+  margin: auto auto;
 }
+
 a {
-    color: black;
+  color: black;
 }
+
 .title {
-    font-family: 'Courier New', monospace;
-    font-weight: 100;
-    font-size: 7rem;
-    text-shadow: 7px 5px #807676;
-    text-align: center;
-    margin: 0;
-    color: deepskyblue;
+  font-family: "Courier New", monospace;
+  font-weight: 100;
+  font-size: 7rem;
+  text-shadow: 7px 5px #807676;
+  text-align: center;
+  margin: 0;
+  color: deepskyblue;
 }
+
 .navbar-item {
-    display: inline-block;
-    margin: 0;
+  display: inline-block;
+  margin: 0;
 }
+
 .navbar {
-    background: transparent;
+  background: transparent;
 }
+
+.portfolio-img {
+  width: 30%;
+  height: 30%;
+  opacity: 0.5;
+}
+
+.portfolio-img:hover {
+  opacity: 0.8;
+}
+
 @media only screen and (max-width: 768px) {
-    .title {
-        font-size: 4rem;
-        text-shadow: 2px 2px #807676;
-    }
-    .showsList {
-        font-size: xx-small;
-    }
-    .showsPanel {
-        margin: 0;
-        width: 100%;
-    }
-    .showsPanel, li {
-        padding-bottom: 2%;
-    }
-    .bookingContact {
-        padding: 0;
-    }
+  .title {
+    font-size: 4rem;
+    text-shadow: 2px 2px #807676;
+  }
+
+  .showsList {
+    font-size: xx-small;
+  }
+
+  .showsPanel {
+    margin: 0;
+    width: 100%;
+  }
+
+  .showsPanel,
+  li {
+    padding-bottom: 2%;
+  }
+
+  .bookingContact {
+    padding: 0;
+  }
 }

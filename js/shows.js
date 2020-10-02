@@ -76,7 +76,7 @@ function render() {
   try {
     document.getElementById('showsList').innerHTML = parseShows();
   } catch (error) {
-    // console.log(error);
+    // console.log(error);  
   }
   document.getElementById('nav').innerHTML = navBarRender()
 }
@@ -94,9 +94,18 @@ function renderEmailThankYouModal() {
 
 
 window.addEventListener('mousemove', e => {
+  // TODO - create mouse as light source effect for shadow
   const titleBar = document.getElementsByClassName('title')[0];
-  let x = e.x / 50;
+  let windowWidth = window.innerWidth;
+  let mouseX = e.clientX;
+  let x = mouseX / (windowWidth / 2);
   let y = e.y / 50;
-  let shadow = x + "px " + y + "px #807676"
+  var shadow = "";
+  if (mouseX > windowWidth / 2) {
+    shadow = x + "px " + y + "px #807676";
+  } else {
+    shadow = "-" + x + "px " + y + "px #807676";
+  }
+  console.log(`w w = ${windowWidth}\nmouseX = ${mouseX}\nshadow = ${shadow}`);
   titleBar.style.textShadow = shadow
 })
