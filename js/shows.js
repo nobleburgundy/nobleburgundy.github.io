@@ -69,7 +69,7 @@ function parseShows() {
 }
 
 function navBarRender() {
-  return ("<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\">Home</a><a class=\"navbar-item\" href=\"https://nobleburgundy.github.io/dev/portfolio.html\">Dev Projects</a><a class=\"navbar-item\" href=\"shows.html\">Music</a><a class=\"navbar-item\" href=\"contact.html\">Contact</a></nav>");
+  return ("<nav class=\"navbar\"><a class=\"navbar-item\" href=\"index.html\">Home</a><a class=\"navbar-item\" href=\"https://james-gould.herokuapp.com/\">Dev Projects</a><a class=\"navbar-item\" href=\"shows.html\">Music</a><a class=\"navbar-item\" href=\"contact.html\">Contact</a></nav>");
 }
 
 function render() {
